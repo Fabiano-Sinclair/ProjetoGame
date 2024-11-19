@@ -9,7 +9,9 @@ class Game:
         :param levels: Lista de instâncias da classe Level (opcional).
         """
         pygame.init()
-        self.window = pygame.display.set_mode(size=(600, 480))
+
+        # Altera o tamanho da janela para o tamanho da imagem
+        self.window = pygame.display.set_mode(size=(1920, 1080))
         pygame.display.set_caption('Jogo Principal')
 
         self.levels = levels if levels else []
@@ -25,6 +27,7 @@ class Game:
                 self.running = False
 
     def run(self):
+
         """
         Executa o jogo.
         """
