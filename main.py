@@ -1,14 +1,20 @@
-import pygame
+from Game import Game
 
-print('Statup Start')
-pygame.init()
-window = pygame.display.set_mode(size=(600, 480))
-print('Statup End')
+def main():
+    try:
+        # Cria uma instância do jogo
+        game = Game()
 
-print('Statup Start')
-while True:
-    # Check for all events
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()  # Close Window
-            quit()  # end pygame
+        # Executa o jogo
+        game.run()
+
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+
+    finally:
+        print("Encerrando o jogo...")
+
+if __name__ == '__main__':
+    main()
+
+
